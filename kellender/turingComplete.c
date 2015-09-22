@@ -35,8 +35,6 @@ int main(int argc, char *argv[]){
 
   //stores the comand of the file to be run
   progName = argv[2];
-  printf("%s\n", argv[1]);
-  printf("%s\n", argv[2]);
 
   printf("--beginning of program\n");
 
