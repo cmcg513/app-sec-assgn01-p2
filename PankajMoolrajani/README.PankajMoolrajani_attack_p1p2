@@ -1,0 +1,14 @@
+Exploit for PankajMoolrajani's sandbox (sandbox.py)
+
+Assignment 1, Part 2 
+Application Security CS-GY 4753 
+Prof. Justin Cappos
+
+README Author: Casey McGinley
+
+My attack works in two parts. In the first, I bypass the blacklisted words by breaking words like "execute" into 2 separate strings and then rejoining them. Additionally, as the namespace was not cleared, I have access to builtin functions like getattr. Using that, I gain access to the sandbox's functions execute(), which executes an arbitrary file's code. I then use locals (which was not blacklisted) to get a hold of the file handle for my program so that I can close it. I do this to bypass resource limitation imposed by the sandbox allowing for only one open file at a time. Using execute() I run a second piece of exploit code which is able to bypass the blacklist entirely, allowing me to arbitrarily read and write to files.
+
+The relevant files here are:
+
+PankajMoolrajani_attack_p1.py
+PankajMoolrajani_attack_p2.py
