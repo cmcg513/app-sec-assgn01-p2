@@ -15,10 +15,10 @@
 
 from sys import version_info, argv, platform
 
-# if platform == "linux" and version_info > (3, 2):	# Force user to use Python 3.3 or 3.4 or 3.5 on Linux
-#     pass
-# else:
-#     raise Exception(str(platform) + " Pythonv" + str(version_info.major) + "." + str(version_info.minor) + " not supported")
+if platform == "linux" and version_info > (3, 2):	# Force user to use Python 3.3 or 3.4 or 3.5 on Linux
+    pass
+else:
+    raise Exception(str(platform) + " Pythonv" + str(version_info.major) + "." + str(version_info.minor) + " not supported")
 
 import fcntl
 
