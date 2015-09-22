@@ -1,0 +1,13 @@
+# s1 = 'im'
+# s2 = 'port __builtin__'
+# s = s1 + s2
+# exec s
+
+# f = open('bad_file.txt', 'w')
+# f.write("I'm free!")
+
+# safecall.__globals__
+def blah():
+	print '1'
+
+exec 'blah.__globals__'
