@@ -1,0 +1,2 @@
+x = {'None':None,'True':True,'False':False}
+exec "print dir();print __builtins__" in x
