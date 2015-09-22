@@ -1,0 +1,27 @@
+### These instructions add to a set of numbers, then counts down to negative numbers
+SET,1,0
+SET,2,1
+SET,3,0
+
+ADD,1,2,3
+ADD,3,2,3
+ADD,3,2,3
+ADD,3,2,3
+ADD,3,2,3
+ADD,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+SUB,3,2,3
+
+DISP,3
+DISP,2
+DISP,1
+
+HALT
+

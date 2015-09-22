@@ -1,0 +1,13 @@
+Exploit for ceinfo's sandbox (TuringTest)
+
+Assignment 1, Part 2 
+Application Security CS-GY 4753 
+Prof. Justin Cappos
+
+README Author: Casey McGinley
+
+Given the limited nature of the instruction set, I struggled to come up with a good exploit to crash the sandbox or break free of it. However, given enough time, I'd be willing to bet I could find a vulnerability or two, especially given how complex the code is. As far as I could tell though, the author seems to handle edge cases fairly well.
+
+One thing I did note was that I do not believe this instruction set can be considered Turing-complete. The instruction set included now mechanism for looping, nor for conditionals, both of which are required for Turing-completeness as I understand it. 
+
+I did include one "attack", but it highlights less a vulnerability and more just a bug in the author's desired program logic. The author uses a function isInMaxMinDatatype() to ensure all variable values are within the min and max range of an Integer (2^31 - 1). However, due to the mixing of the BigInteger class with these Integer constraints. When intValue is used on a BigInteger over 2^31 - 1, it overflows and becomes negative. This means it will still pass this condition and a BigInteger of 2147483649 or larger may be sent, which the author did not seem to want.
