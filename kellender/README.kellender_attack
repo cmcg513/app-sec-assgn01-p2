@@ -13,3 +13,7 @@ So, since I couldn't get the sandbox itself to work I unfortunately could not co
 The sandbox does not attempt to blacklist or whitelist any specific keywords or functions. As far as I can tell, any and all include statements would be completely valid for a given input program. The author utilizes fork() so that only child processes execute the input program. The comments indicate the author does this so that the executed program is run in a separate address space fromt eh parent process, but I don't know that this achieves as much isolation as intended. The author also uses the resource library to limit virtual address space as well as the max file size (this is set to zero to prevent files from being created at all).
 
 Given that nothing seems to bar include statements, my would-be exploit simply alter's the max file size again so that files now CAN be made. Now I can use fopen/fprintf to read and alter files to my heart's content. 
+
+Relevant file:
+kellender_attack.c
+

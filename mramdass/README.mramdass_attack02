@@ -7,3 +7,6 @@ Prof. Justin Cappos
 README Author: Casey McGinley
 
 My second attack against this sandbox is much more trivial, but I'm including it for the sake of being thorough. Essentially, in sandbox.py the author misspelled "global" as "gloabl". As I said, this is certainly a trivial "vulnerability" to exploit. As with my first attack, I break up balcklisted strings into two parts to avoid detection. Then, since globals() isn't actually blacklisted, I have easy access to __builtins__, and thus open() via the getattr() function. With that, I have arbitrary read/write access.
+
+Relevant file:
+mramdass_attack02.py

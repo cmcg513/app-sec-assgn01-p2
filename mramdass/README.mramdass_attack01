@@ -7,3 +7,7 @@ Prof. Justin Cappos
 README Author: Casey McGinley
 
 My first attack against this sandbox simply exploits the fact eval was not blacklisted. Breaking the function name "open" into two separate strings to avoid detection by the looping over the blacklist, I use eval to open an arbitrary file. Similarly, I break "write" into two separate strings and leverage eval again.
+
+Relevant file:
+mramdass_attack01.py
+
